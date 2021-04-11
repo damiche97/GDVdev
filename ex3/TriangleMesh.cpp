@@ -246,6 +246,63 @@ void TriangleMesh::loadOFF(const char* filename, const Vec3f& BBmid, const float
   scaleToLength(BBlength, true);
 }
 
+void TriangleMesh::loadOBJ(const char* filename) {
+    std::ifstream in(filename);
+    if (!in.is_open()) {
+        std::cout << "loadOBJ: can not find " << filename << endl;
+        return;
+    }
+    while (in) {
+        string block;
+        in >> block;
+        if (block == "v") {
+            // vertices.resize(vertices.size() + 1);
+            float vx, vy, vz;
+            in >> vx;
+            in >> vy;
+            in >> vz;
+            vertices.push_back(Vertex{ vx,vy,vz });
+            //std::cout << "vertex detected" << endl;
+        }
+        else if (block == "vn") {
+            float nx, ny, nz;
+            in >> nx;
+            in >> ny;
+            in >> nz;
+            //vertices.push_back(Vertex{ nx,ny,nz });
+            // muss überarbeitet werden
+        }
+        else if (block == "f") {
+            //string v1, v2, v3, vt1, vt2, vt3, vn1, vn2, vn3;
+            string v1, v2, v3, vt1, vt2, vt3, vn1, vn2, vn3;// v4, vt4, vn4;
+            //in >> block;
+            //char  s[256];
+            //std::stringstream ss(block);
+            std::getline(in, v1, '/');
+            std::getline(in, vt1, '/');
+            std::getline(in, vn1, ' ');
+
+            std::getline(in, v2, '/');
+            std::getline(in, vt2, '/');
+            std::getline(in, vn2, ' ');
+
+            std::getline(in, v3, '/');
+            std::getline(in, vt3, '/');
+            std::getline(in, vn3);
+
+            //std::getline(in, v4, '/');
+            //std::getline(in, vt4, '/');
+            //std::getline(in, vn4);
+
+            triangles.push_back(Triangle{ std::stoi(v1) - 1,std::stoi(v2) - 1,std::stoi(v3) - 1 });
+            //triangles.push_back(Triangle{ std::stoi(v3) - 1,std::stoi(v4) - 1,std::stoi(v1) - 1 });
+            //in >> s;
+
+        }
+    }
+    calculateNormals();
+}
+
 void TriangleMesh::calculateNormalsByArea() {
   // sum up triangle normals in each vertex
   normals.resize(vertices.size());

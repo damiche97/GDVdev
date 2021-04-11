@@ -135,6 +135,8 @@ public:
   // translates and scales vertices with bounding box center at BBmid and largest side BBlength
   void loadOFF(const char* filename, const Vec3f& BBmid, const float BBlength);
 
+  void TriangleMesh::loadOBJ(const char* filename);
+
   void loadFromMemory(
       Vertices && inputVertices,
       Triangles && inputTriangles
