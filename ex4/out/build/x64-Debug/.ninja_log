@@ -1,0 +1,7 @@
+# ninja log v5
+48	1944	6395048191793456	CMakeFiles/main.dir/imageloader.cpp.obj	5c09a0091392912c
+25	2003	6395048192433079	CMakeFiles/main.dir/TriangleMesh.cpp.obj	b481135644d0688b
+2	2393	6395048196440772	CMakeFiles/main.dir/main.cpp.obj	cb96adb5d9291d21
+2395	3288	6395048204895925	main.exe	9f01450e1bdec698
+1	1810	6395054496514040	CMakeFiles/main.dir/imageloader.cpp.obj	5c09a0091392912c
+1811	2135	6395054499222489	main.exe	9f01450e1bdec698

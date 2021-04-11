@@ -1,0 +1,9 @@
+# ninja log v5
+317	1922	6395056364274513	CMakeFiles/main.dir/Matrix.cpp.obj	ff45de8eb3382b97
+22	3932	6395056383343567	CMakeFiles/main.dir/GridTask.cpp.obj	40477ee37797aa1e
+104	3960	6395056385202502	CMakeFiles/main.dir/Task.cpp.obj	4e264612fff0d3e9
+46	4030	6395056385732195	CMakeFiles/main.dir/SceneTask.cpp.obj	393bdc034dc53f44
+2	4552	6395056390219626	CMakeFiles/main.dir/main.cpp.obj	6681161cbb7a9fb9
+64	4719	6395056391149090	CMakeFiles/main.dir/TriangleMesh.cpp.obj	57a0e34145a0d1b6
+1961	4720	6395056392468344	CMakeFiles/main.dir/Timer.cpp.obj	654c2fcd9c61d4e3
+4721	9017	6395056430145787	main.exe	cec872b358945966

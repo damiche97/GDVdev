@@ -1,0 +1,6 @@
+# ninja log v5
+51	1215	6395055481374139	CMakeFiles/main.dir/TriangleScene.cpp.obj	b658395c2d5b02a6
+33	1604	6395055485291896	CMakeFiles/main.dir/Task.cpp.obj	4e264612fff0d3e9
+2	1798	6395055487250774	CMakeFiles/main.dir/main.cpp.obj	6681161cbb7a9fb9
+16	1869	6395055487990357	CMakeFiles/main.dir/TriangleMesh.cpp.obj	57a0e34145a0d1b6
+1870	2672	6395055495582411	main.exe	6e14f3e917c68b62
